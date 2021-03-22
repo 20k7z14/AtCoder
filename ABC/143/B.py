@@ -1,0 +1,14 @@
+import sys
+import os
+f = open('test.txt','r')
+sys.stdin = f
+
+n = int(input())
+D = list(map(int,input().split()))
+
+ans = 0
+for i in range(n):
+    for j in range(i+1,n):
+        ans += D[i] * D[j]
+
+print(ans)
